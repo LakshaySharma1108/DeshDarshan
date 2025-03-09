@@ -1,322 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeshDarshan - Jaipur</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #4b3f2f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        h1{
-            color: #f8f5f0;
-        }
-
-        h2 {
-            color: #4b3f2f;
-        }
-
-        footer {
-            background-color: #4b3f2f;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Button Styles */
-        .btn {
-            background-color: #d77f5e;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background-color: #af4c28;
-        }
-
-        /* Specific Page Styles */
-        .intro {
-            text-align: center;
-            padding: 50px;
-        }
-
-        .login-form {
-            width: 50%;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-form input,
-        .login-form select,
-        .login-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .main-content {
-            padding: 30px;
-            text-align: center;
-        }
-
-        #subpage-dropdown {
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .subpage-content {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .subpage {
-            display: none;
-        }
-
-        header img{
-            position: absolute;
-            left: -2rem;
-            top: 0.2rem;
-            height: 13rem;
-            width: 20rem;
-        }
-    </style>
+    <title>Local Crafts - DeshDarshan</title>
+    <link rel="stylesheet" href="/CSS Files/home.css">
 </head>
-
 <body>
+    <header>
+        <h1>DeshDarshan</h1>
+        <nav class="sticky">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="local-crafts.html">Local Crafts</a></li>
+                <li><a href="food-dining.html">Food & Dining</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="adventures.html">Adventures</a></li>
+                <li><a href="hidden-gems.html">Hidden Gems</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="about-us.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Homepage -->
-    <div id="homePage">
-        <header>
-            <div class="logo"><img src="/Images/logo.png" alt=""></div>
-            <h1>Welcome to DeshDarshan</h1>
-            <nav>
-                <ul>
-                    
-                </ul>
-            </nav>
-        </header>
-
-        <section class="intro">
-            <h2>Experience the Culture of Jaipur</h2>
-            <p>Discover the historical richness, local crafts, food, and more in the Pink City of India.</p>
-            <!-- <a href="index.html" class="btn" onclick="showLoginPage()">Get Started</a> -->
-        <button ><a href="index.html">Get Started</a></button>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 DeshDarshan. All rights reserved.</p>
-        </footer>
-    </div>
-
-    <!-- Login Page -->
-    <div id="loginPage" class="subpage">
-        <header>
-            <h1>Login to DeshDarshan</h1>
-        </header>
-
-        <section class="login-form">
-            <form onsubmit="handleLogin(event)">
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email" required>
 
-                <label for="locality">Locality to visit:</label>
-                <input type="text" id="locality" name="locality" value="Jaipur" required><br><br>
+                <label for="locality">Locality to Visit:</label>
+                <input type="text" id="locality" name="locality" required>
 
                 <label for="mobile">Mobile Number:</label>
-                <input type="tel" id="mobile" name="mobile" required><br><br>
+                <input type="tel" id="mobile" name="mobile" required>
 
-                <label for="time">Time of Visit:</label>
-                <select id="time" name="time">
-                    <option value="day">Day</option>
-                    <option value="night">Night</option>
-                </select><br><br>
+                <label for="visit-time">Time of Visit:</label>
+                <input type="text" id="visit-time" name="visit-time" required>
 
                 <label for="budget">Budget:</label>
-                <input type="number" id="budget" name="budget" required><br><br>
+                <input type="number" id="budget" name="budget" required>
 
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit">Login</button>
             </form>
         </section>
 
-        <footer>
-            <p>&copy; 2025 DeshDarshan. All rights reserved.</p>
-        </footer>
-    </div>
-
-    <!-- Main Page -->
-    <div id="mainPage" class="subpage">
-        <header>
-            <h1>Welcome to Jaipur</h1>
-            <nav>
-                <ul>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Home')">Home</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Local Crafts')">Local Crafts</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Food & Dining')">Food & Dining</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Gallery')">Gallery</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Map')">Map</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Blog')">Blog</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Adventure')">Adventure</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Hidden Gems')">Hidden Gems</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Culture')">Culture</a></li>
-                    <li><a href="javascript:void(0);" onclick="showSubpage('Review')">Review</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="main-content">
-            <h2>Explore Jaipur</h2>
-            <p>Jaipur, also known as the "Pink City", offers a rich history, vibrant culture, and unique experiences.</p>
-
-            <!-- <select id="subpage-dropdown" onchange="navigateSubpage()">
-                <option value="">Select a Category</option>
-                <option value="history">History</option>
-                <option value="landmarks">Famous Landmarks</option>
-                <option value="culture">Culture</option>
-                <option value="food">Food</option>
-                <option value="adventure">Adventure Activities</option>
-            </select> -->
+        <section id="states">
+            <h2>Explore Indian Cities State by State</h2>
+            <ul>
+                <li><a href="rajasthan.html">Rajasthan</a></li>
+                <li><a href="maharashtra.html">Maharashtra</a></li>
+            </ul>
         </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2025 DeshDarshan. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2025 DeshDarshan. All rights reserved.</p>
+    </footer>
 
-    <!-- Home Page -->
-    <div id="Map" class="subpage-content subpage">
-        <h2>Map</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-
-    <!-- Local Crafts Page -->
-    <div id="Local Crafts" class="subpage-content subpage">
-        <h2>Local crafts</h2>
-        <p>Jaipur is home to several iconic landmarks including the Amber Fort, Hawa Mahal, City Palace, and Jantar Mantar.</p>
-    </div>
-
-    <!-- Food & Dining Page -->
-    <div id="Food & Dining" class="subpage-content subpage">
-        <h2>Food & Dining</h2>
-        <p>Jaipur has a vibrant cultural scene with traditional dance, music, and festivals like Teej and Diwali. The city is also famous for its handicrafts such as block printing and jewelry making.</p>
-    </div>
-
-    <!-- Gallery Page -->
-    <div id="Gallery" class="subpage-content subpage">
-        <h2>Gallery</h2>
-        <p>Jaipur's food culture is rich with flavors. Must-try dishes include Dal Baati Churma, Gatte ki Sabzi, and traditional sweets like Ghevar and Mawa Kachori.</p>
-    </div>
-
-    <!-- Map Page -->
-    <div id="Map" class="subpage-content subpage">
-        <h2>Map</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-
-    <div id="Blog" class="subpage-content subpage">
-        <h2>Blog</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-
-    <div id="Adventure" class="subpage-content subpage">
-        <h2>Adventure</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-
-    <div id="Hidden Gems" class="subpage-content subpage">
-        <h2>Hidden Gems</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-
-    <div id="Culture" class="subpage-content subpage">
-        <h2>Culture</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-
-    <div id="Review" class="subpage-content subpage">
-        <h2>Review</h2>
-        <p>For adventure seekers, Jaipur offers activities like hot air balloon rides, desert safari, and trekking at the Aravalli hills.</p>
-    </div>
-    <script>
-        function showLoginPage() {
-            document.getElementById("homePage").style.display = "none";
-            document.getElementById("loginPage").style.display = "block";
-        }
-
-        function handleLogin(event) {
-            event.preventDefault(); // Prevent form submission
-
-            // Save user info to localStorage or sessionStorage
-            const name = document.getElementById("name").value;
-            localStorage.setItem("userName", name);
-
-            // After login, show the main page
-            document.getElementById("loginPage").style.display = "none";
-            document.getElementById("mainPage").style.display = "block";
-        }
-
-        function showSubpage(subpage) {
-            // Hide all subpages
-            const subpages = document.querySelectorAll('.subpage-content');
-            subpages.forEach(function (page) {
-                page.style.display = 'none';
-            });
-
-            // Show the selected subpage
-            document.getElementById(subpage).style.display = 'block';
-        }
-
-        function navigateSubpage() {
-            const selectedValue = document.getElementById('subpage-dropdown').value;
-            if (selectedValue) {
-                showSubpage('jaipur' + selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1));
-            }
-        }
-    </script>
+    <script src="/Js Files/script.js"></script>
+    <script src="/Js Files/drop.js"></script>
 </body>
-
 </html>
