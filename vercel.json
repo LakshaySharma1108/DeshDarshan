@@ -1,14 +1,8 @@
 {
     "routes": [
-      { "src": "/(.*)", "dest": "/HTML Files/index.html" }
-    ]
-  }
-  
-  {
-    "routes": [
+      { "src": "/(.*)", "dest": "/HTML Files/index.html" },
       { "src": "/css/(.*)", "dest": "/CSS Files/$1" },
       { "src": "/js/(.*)", "dest": "/Js Files/$1" },
       { "src": "/html/(.*)", "dest": "/HTML Files/$1" }
     ]
-  }
-  
+}
