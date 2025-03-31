@@ -1,20 +1,16 @@
 {
     "routes": [
+        { "src": "/css/(.*)", "dest": "/css/$1" },
+        { "src": "/js/(.*)", "dest": "/js/$1" },
+        { "src": "/images/(.*)", "dest": "/images/$1" },
+        { "src": "/(.*)", "dest": "/html/$1" }
+    ],
+    "headers": [
         {
-            "src": "/(.*)",
-            "dest": "/html/index.html"
-        },
-        {
-            "src": "/css/(.*)",
-            "dest": "/css/$1"
-        },
-        {
-            "src": "/js/(.*)",
-            "dest": "/js/$1"
-        },
-        {
-            "src": "/html/(.*)",
-            "dest": "/html/$1"
+            "source": "/(.*)",
+            "headers": [
+                { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+            ]
         }
     ]
 }
